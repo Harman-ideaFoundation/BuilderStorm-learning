@@ -1,0 +1,26 @@
+Login page and after login user come to overview poge on which he is able to view graph showing no of projects. no of users per projects,and no of drawings per project.
+On left side a naviagtion showing three section User management, Project Management, Project Drawings.
+
+Create a User Management Section along with permission Groups.
+--------On user listing page along with user listing we have button on top to create user with fields First name , Last Name, Email ,User Type. Date of Birth, profile iamge, addreess.
+In listing we have edit , delete, assign project action icons.On cick of assign projects all projects are showing with check box and save button.
+
+In Project Management listing page along with lsiting we have button on top to create projects with fields Project name , number, image , address, start date, end date.
+
+In Drawings section we have listing page along with Create new button on top to create drawingsForm include Drawing no, name, status, file(only pdf files), category .
+
+We have four types of permission Admin, Standard, View , None.
+
+Please follow proper coding standards acc. to PSR.
+Validation should be placed on all forms.
+Use twig for html files.
+Use Service Repository Pattern.All functions should be placed in repositories using oops concept.
+
+Permission related changes
+--------------------------
+1. Drawing listing should be project specific where user can choose and change the project. Admin can see all projects.other user can see own project.
+2. Standard user can add and edit drawing.
+3. Admin user can add, edit delete the drawing.
+4. View user can view drawing only
+5. None user can't see drawing section.
+
