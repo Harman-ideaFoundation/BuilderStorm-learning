@@ -1,4 +1,6 @@
 <?php
+session_start();
+session_destroy();
 require_once 'vendor/autoload.php';
 //require_once 'app/classes/service/users.php';
 use user_authentication\users;

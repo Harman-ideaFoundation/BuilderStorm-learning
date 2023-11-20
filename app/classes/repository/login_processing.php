@@ -1,9 +1,9 @@
 <?php
 namespace login_process;
 use connection\DB;
+
 //require_once 'config/DB.php';
 //require_once 'app/classes/service/users.php';
-use user_authentication\users;
 
 class login_processing{
 

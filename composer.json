@@ -1,10 +1,19 @@
 {
-    "require": {
-        "twig/twig": "^3.7"
-    },
+    "name": "admin/builderstorm-learning",
     "autoload": {
         "psr-4": {
-            "classes\\": "app/"
+            "user_authentication\\": "app/classes/service",
+            "login_process\\": "app/classes/repository",
+            "connection\\": "config/"
         }
+    },
+    "authors": [
+        {
+            "name": "harman",
+            "email": "kaurhanspal8@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.7.1"
     }
 }

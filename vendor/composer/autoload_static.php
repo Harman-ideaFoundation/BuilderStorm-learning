@@ -12,9 +12,17 @@ class ComposerStaticInit19b0974c8ed31292a8cd7bea470e26f5
     );
 
     public static $prefixLengthsPsr4 = array (
+        'u' => 
+        array (
+            'user_authentication\\' => 20,
+        ),
+        'l' => 
+        array (
+            'login_process\\' => 14,
+        ),
         'c' => 
         array (
-            'classes\\' => 8,
+            'connection\\' => 11,
         ),
         'T' => 
         array (
@@ -28,9 +36,17 @@ class ComposerStaticInit19b0974c8ed31292a8cd7bea470e26f5
     );
 
     public static $prefixDirsPsr4 = array (
-        'classes\\' => 
+        'user_authentication\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/app',
+            0 => __DIR__ . '/../..' . '/app/classes/service',
+        ),
+        'login_process\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/classes/repository',
+        ),
+        'connection\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/config',
         ),
         'Twig\\' => 
         array (

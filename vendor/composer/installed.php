@@ -1,19 +1,19 @@
 <?php return array(
     'root' => array(
-        'name' => '__root__',
+        'name' => 'admin/builderstorm-learning',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'e7d491024f2cbd39ca5d574711020005f8f58df6',
+        'reference' => '264bee40e31b13372483d3a018bc2bb6c85bdfa9',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
-        '__root__' => array(
+        'admin/builderstorm-learning' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'e7d491024f2cbd39ca5d574711020005f8f58df6',
+            'reference' => '264bee40e31b13372483d3a018bc2bb6c85bdfa9',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

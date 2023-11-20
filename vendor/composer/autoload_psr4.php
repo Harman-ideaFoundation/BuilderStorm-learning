@@ -6,7 +6,9 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'classes\\' => array($baseDir . '/app'),
+    'user_authentication\\' => array($baseDir . '/app/classes/service'),
+    'login_process\\' => array($baseDir . '/app/classes/repository'),
+    'connection\\' => array($baseDir . '/config'),
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),

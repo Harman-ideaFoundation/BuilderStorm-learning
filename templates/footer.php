@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,9 +8,16 @@
 </head>
 
 <body>
-    
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <p>footer</p>
+        </div>
+    </div>
 
 
- 
-    <p>welcome {{session}} . It's user management</p>
- 
+    </div>
+</body>
+
+</html>

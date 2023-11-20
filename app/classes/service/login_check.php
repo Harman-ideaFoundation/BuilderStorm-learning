@@ -1,6 +1,8 @@
 <?php
 //require_once "app/classes/repository/login_processing.php";
 use login_process\login_processing;
+use user_authentication\users;
+
 class login_check
 {
     private $loginHandler;
