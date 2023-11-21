@@ -1,0 +1,29 @@
+p{letter-spacing:1pt; text-align: justify; font-family: sans-serif; padding-left:10px; padding-right: 10px}
+h2,h1{font-family:Times New Roman; font-variant: small-caps}
+h3,h4,h5,h6{font-family:Times New Roman;}
+
+.tclr{color:#39b54a; font-family:sans-serif;}
+.bclr{background-color:#39b54a;}
+.inp{background:none; border: none; border-bottom:thin solid #e5e5e5}
+
+.bg { 
+  background-image: url("../index.jpg");
+  height: 500px; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgs { 
+  background-image: url("../contact-bg.jpg");
+  height: 200px; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.foot { 
+  background-image: url("../black.jpg");
+  height: 200px; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
