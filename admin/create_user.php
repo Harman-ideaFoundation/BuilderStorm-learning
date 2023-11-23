@@ -27,9 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $address = $_POST['address'];
     $dob = $_POST['dob'];
     $image = $_FILES['file'];
-    print_r($_POST);
-    die();
+    $img_name = $image['name'];
+    $img_tmp_name = $image['tmp_name'];
     $password = md5($_POST['password']);
-    $add->add_user($email, $first_name, $last_name, $user_type, $address, $dob, $image,$password);
+    $response=$add->add_user($email, $first_name, $last_name, $user_type, $address, $dob, $img_name, $img_tmp_name,$password);
     exit();
 }

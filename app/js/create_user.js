@@ -66,18 +66,21 @@ $("#create_user_form").validate({
     },
     submitHandler: function (form, e) {
         e.preventDefault();
+        var formData = new FormData(form);
         $.ajax({
             type: "POST",
             dataType: "JSON",
             url: "../admin/create_user.php",
-            data: $(form).serialize(),
+            data: formData,
+            contentType: false,
+            processData: false,
             success: function (response) {
                 console.log(response.response);
                 // Handle the server response
-                if (response.response === "Sorry, there was an error uploading your file") {
+                if (response.response === "not_uploaded") {
                     alert("Sorry, there was an error uploading your image");
                 }
-                else if (response.response === "user created") {
+                else if (response.response === "user_created") {
                     alert("User Created!");
                 }
                 else {
