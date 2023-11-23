@@ -4,7 +4,10 @@
         "psr-4": {
             "user_authentication\\": "app/classes/service",
             "login_process\\": "app/classes/repository",
-            "connection\\": "config/"
+            "connection\\": "config/",
+            "get_userType\\" : "app/classes/repository",
+            "get_Type\\" : "app/classes/repository",
+            "add_user\\": "app/classes/service"
         }
     },
     "authors": [

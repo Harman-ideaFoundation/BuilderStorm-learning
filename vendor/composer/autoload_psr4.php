@@ -8,8 +8,12 @@ $baseDir = dirname($vendorDir);
 return array(
     'user_authentication\\' => array($baseDir . '/app/classes/service'),
     'login_process\\' => array($baseDir . '/app/classes/repository'),
+    'get_userType\\' => array($baseDir . '/app/classes/repository'),
+    'get_Type\\' => array($baseDir . '/app/classes/repository'),
     'connection\\' => array($baseDir . '/config'),
+    'add_user\\' => array($baseDir . '/app/classes/service'),
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
+    'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
 );
