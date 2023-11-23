@@ -17,6 +17,37 @@
                 <a href="../admin/create_user.php"><button class="btn btn-dark">Create User</button></a>
             </div>
         </div><hr />
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-hovered">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email Id</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for key,user in data %}
+                                <tr>
+                                    <td>{{user['first_name']}}</td>
+                                    <td>{{user['last_name']}}</td>
+                                    <td>{{user['email']}}</td>
+                                    <td>
+                                        <button class="btn btn-primary">Edit</button>
+                                        <button class="btn btn-danger">Delete</button>
+                                        <button class="btn btn-dark">Block</button>
+                                        <button class="btn btn-success">Assign project</button>
+                                    </td>
+                                </tr>
+                        {% endfor %}
+                        <tr></tr>
+                    </tbody>
+                    <tfoot></tfoot>
+                </table>
+            </div>
+        </div>
     </div>
 </body>
 </html>

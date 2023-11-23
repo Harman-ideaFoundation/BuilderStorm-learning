@@ -26,6 +26,16 @@ class login_processing{
         return($result);
     }
 
+    public function fetch_records(){
+        $sql_data = $this->pdo->prepare("select * from users ");
+
+        $sql_data->execute();
+        $result_data = $sql_data->fetchAll(\PDO::FETCH_ASSOC);
+        return ($result_data);
+        
+        
+    }
+
     // public function check_isblock($email){
     //     $sql_block = $this->pdo->prepare("select is_block from users where email = ?");
     //     $sql_block->bindParam(1, $email);

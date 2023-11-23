@@ -40,25 +40,28 @@ class user_type{
     }
 
     public function add_permission($last_id,$user_type){
-        
-        $permission =array(
-            1 =>['add','edit','delete'],
-            2 =>['add','edit'],
-            3 =>['view_drawing'],
-            4 =>['cant_view']
-        );
-        $alot_permissions = array($permission[$user_type]);
-        
-        $permission_sql = $this->pdo->prepare("INSERT INTO `permissions`(`permission_name`, `user_id`) VALUES (:permission,:id)");
-        foreach ($alot_permissions as $values) {
-            foreach($values as $value){
-                $permission_sql->bindParam(':permission', $value);
-                $permission_sql->bindParam(':id', $last_id);
-
-                // Execute the prepared statement
-                $permission_sql->execute();
-            }
+        if($user_type==4){
+            exit();
         }
+        else{
+            $permission = array(
+                1 => ['add', 'edit', 'delete'],
+                2 => ['add', 'edit'],
+                3 => ['view_drawing'],
+            );
+            $alot_permissions = array($permission[$user_type]);
+
+            $permission_sql = $this->pdo->prepare("INSERT INTO `permissions`(`permission_name`, `user_id`) VALUES (:permission,:id)");
+            foreach ($alot_permissions as $values) {
+                foreach ($values as $value) {
+                    $permission_sql->bindParam(':permission', $value);
+                    $permission_sql->bindParam(':id', $last_id);
+
+                    // Execute the prepared statement
+                    $permission_sql->execute();
+                }
+            } 
+        }    
     }
 }
 

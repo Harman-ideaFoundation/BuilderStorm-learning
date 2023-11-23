@@ -11,15 +11,8 @@ require_once '../vendor/autoload.php';
 
 $loader = new \Twig\Loader\FilesystemLoader('../views');
 $twig = new \Twig\Environment($loader);
-
-$type = new user_type();
-$output = $type->fetch_types();
-echo $twig->render('create_user.html.twig', [
-    'session' => $_SESSION['username'],
-    'types' =>$output
-]);
 $add = new user();
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_POST['submit_user'])) {
     $email = $_POST['email'];
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
@@ -30,6 +23,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $img_name = $image['name'];
     $img_tmp_name = $image['tmp_name'];
     $password = md5($_POST['password']);
-    $response=$add->add_user($email, $first_name, $last_name, $user_type, $address, $dob, $img_name, $img_tmp_name,$password);
+    $response = $add->add_user($email, $first_name, $last_name, $user_type, $address, $dob, $img_name, $img_tmp_name, $password);
     exit();
 }
+$type = new user_type();
+$output = $type->fetch_types();
+
+
+echo $twig->render('create_user.html.twig', [
+    'session' => $_SESSION['username'],
+    'types' =>$output
+]);
