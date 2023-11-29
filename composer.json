@@ -7,7 +7,10 @@
             "connection\\": "config/",
             "get_userType\\" : "app/classes/repository",
             "get_Type\\" : "app/classes/repository",
-            "add_user\\": "app/classes/service"
+            "add_user\\": "app/classes/service",
+            "project\\": "app/classes/repository",
+            "project_update\\":"app/classes/service",
+            "ajax\\":"app/ajax/"
         }
     },
     "authors": [

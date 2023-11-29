@@ -3,7 +3,7 @@
         'name' => 'admin/builderstorm-learning',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '5a9ea443681d290e910acbe50c76003d3a6e1d23',
+        'reference' => '7f027d719fb7d84aa1368a9d4b84f847817b51b9',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'admin/builderstorm-learning' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '5a9ea443681d290e910acbe50c76003d3a6e1d23',
+            'reference' => '7f027d719fb7d84aa1368a9d4b84f847817b51b9',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

@@ -19,32 +19,51 @@
         </div><hr />
         <div class="row">
             <div class="col-sm-12">
-                <table class="table table-hovered">
+                <table class="table">
                     <thead>
-                        <tr>
+                        <tr class="text-center">
+                            <th>Id</th>
                             <th>First Name</th>
                             <th>Last Name</th>
                             <th>Email Id</th>
+                            <th>D.O.B</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for key,user in data %}
-                                <tr>
-                                    <td>{{user['first_name']}}</td>
-                                    <td>{{user['last_name']}}</td>
-                                    <td>{{user['email']}}</td>
+                            {% for innerkey,inneruser in user %}
+                                <tr class="text-center">
+                                    <td>{{inneruser['id']}}</td>
+                                    <td>{{inneruser['first_name']}}</td>
+                                    <td>{{inneruser['last_name']}}</td>
+                                    <td>{{inneruser['email']}}</td>
+                                    <td>{{inneruser['dob']}}</td>
                                     <td>
-                                        <button class="btn btn-primary">Edit</button>
-                                        <button class="btn btn-danger">Delete</button>
-                                        <button class="btn btn-dark">Block</button>
-                                        <button class="btn btn-success">Assign project</button>
+                                        <a href="../admin/edit_user.php?ed={{inneruser['id']}}"><button class="btn btn-primary">Edit</button></a>&nbsp;
+                                        <a href="../admin/overview.php?dl={{inneruser['id']}}"><button class="btn btn-danger">Delete</button></a>&nbsp;
+                                        {% if inneruser['is_block']==0 %}
+                                            <a href="../admin/overview.php?block={{inneruser['id']}}"><button class="btn btn-dark">Block</button></a>&nbsp;
+                                        {% else %}
+                                            <a href="../admin/overview.php?block={{inneruser['id']}}"><button class="btn btn-warning">Un Block</button></a>&nbsp;
+                                        {% endif %}
+                                        <a href="../admin/assign_project.php?assign={{inneruser['id']}}"><button class="btn btn-success">Assign project</button></a>
                                     </td>
                                 </tr>
+                            {% endfor %}
                         {% endfor %}
                         <tr></tr>
                     </tbody>
-                    <tfoot></tfoot>
+                    <tfoot>
+                            <tr class="text-center">
+                                <td colspan="6">
+                                    {% for i in range(1,page_data) %}
+                                        <a href='../admin/overview.php?page={{i}}'><button type="button" class="btn btn-outline-info btn-sm">{{i}}</button>
+                                       </a>
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                    </tfoot>
                 </table>
             </div>
         </div>

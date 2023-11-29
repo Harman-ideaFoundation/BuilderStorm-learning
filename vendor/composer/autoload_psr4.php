@@ -7,10 +7,13 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'user_authentication\\' => array($baseDir . '/app/classes/service'),
+    'project_update\\' => array($baseDir . '/app/classes/service'),
+    'project\\' => array($baseDir . '/app/classes/repository'),
     'login_process\\' => array($baseDir . '/app/classes/repository'),
     'get_userType\\' => array($baseDir . '/app/classes/repository'),
     'get_Type\\' => array($baseDir . '/app/classes/repository'),
     'connection\\' => array($baseDir . '/config'),
+    'ajax\\' => array($baseDir . '/app/ajax'),
     'add_user\\' => array($baseDir . '/app/classes/service'),
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),

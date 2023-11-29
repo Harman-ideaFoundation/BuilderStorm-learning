@@ -1,0 +1,73 @@
+{% include "templates/header.html.twig" %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuilderStorm Learning</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row  pt-5">
+            <div class="col-sm-6">
+                <h3>User Management</h3>
+            </div>
+            <div class="col-sm-6 text-end">
+                <a href="../admin/create_project.php"><button class="btn btn-dark">Create Project</button></a>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table">
+                    <thead>
+                        <tr class="text-center">
+                            <th>Id</th>
+                            <th>Project Name</th>
+                            <th>Address</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for key,user in data %}
+                        {% for innerkey,inneruser in user %}
+                        <tr class="text-center">
+                            <td>{{inneruser['id']}}</td>
+                            <td>{{inneruser['name']}}</td>
+                            <td>{{inneruser['address']}}</td>
+                            <td>{{inneruser['start_date']}}</td>
+                            <td>{{inneruser['end_date']}}</td>
+                            <td>
+                                <a href="../admin/edit_project.php?ed={{inneruser['id']}}"><button
+                                        class="btn btn-primary">Edit</button></a>&nbsp;
+                                <a href="../admin/all_projects.php?dl={{inneruser['id']}}"><button
+                                        class="btn btn-danger">Delete</button></a>&nbsp;
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        {% endfor %}
+                        <tr></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="text-center">
+                            <td colspan="6">
+                                {% for i in range(1,page_data) %}
+                                <a href='../admin/overview.php?page={{i}}'><button type="button"
+                                        class="btn btn-outline-info btn-sm">{{i}}</button>
+                                </a>
+                                {% endfor %}
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+{% include "templates/footer.html.twig" %}

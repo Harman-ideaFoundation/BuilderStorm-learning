@@ -17,6 +17,11 @@ class ComposerStaticInit19b0974c8ed31292a8cd7bea470e26f5
         array (
             'user_authentication\\' => 20,
         ),
+        'p' => 
+        array (
+            'project_update\\' => 15,
+            'project\\' => 8,
+        ),
         'l' => 
         array (
             'login_process\\' => 14,
@@ -32,6 +37,7 @@ class ComposerStaticInit19b0974c8ed31292a8cd7bea470e26f5
         ),
         'a' => 
         array (
+            'ajax\\' => 5,
             'add_user\\' => 9,
         ),
         'T' => 
@@ -51,6 +57,14 @@ class ComposerStaticInit19b0974c8ed31292a8cd7bea470e26f5
         array (
             0 => __DIR__ . '/../..' . '/app/classes/service',
         ),
+        'project_update\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/classes/service',
+        ),
+        'project\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/classes/repository',
+        ),
         'login_process\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/classes/repository',
@@ -66,6 +80,10 @@ class ComposerStaticInit19b0974c8ed31292a8cd7bea470e26f5
         'connection\\' => 
         array (
             0 => __DIR__ . '/../..' . '/config',
+        ),
+        'ajax\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/ajax',
         ),
         'add_user\\' => 
         array (
