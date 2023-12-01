@@ -43,9 +43,13 @@
                                 <td>{{inneruser['address']}}</td>
                                 <td>{{inneruser['start_date']}}</td>
                                 <td>{{inneruser['end_date']}}</td>
-                                <td>
-                                    <input type="checkbox" name="checkboxes[]" value="{{inneruser['id']}}">
-                                </td>
+                                    <td>
+                                            {% set attr = 'checked' %}
+
+                                        {% if inneruser['id'] in get_ids %}
+                                            <input type="checkbox" {{attr}} name="checkboxes[]" value="{{inneruser['id']}}">
+                                        
+                                    </td>
                             </tr>
                             {% endfor %}
                             {% endfor %}
@@ -54,7 +58,7 @@
                         <tfoot>
                             <tr class="text-end">
                                 <td colspan="6">
-                                    <input type="submit" name="assign_projects" value="Assign Projects" />
+                                    <input type="submit" name="assign_projects" class="btn btn-success" value="Assign Projects" />
                                 </td>
                             </tr>
                             <tr class="text-center">

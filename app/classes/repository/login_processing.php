@@ -92,7 +92,7 @@ class login_processing{
         $sql_assign = $this->pdo->prepare("select * from projects");
         $sql_assign->execute();
 
-        $sql_assign1 = $this->pdo->prepare("select * from projects limit $start_from,$row_per_page");
+        $sql_assign1 = $this->pdo->prepare("select * from projects");
 
         $sql_assign1->execute();
         $result_data = $sql_assign1->fetchAll(\PDO::FETCH_ASSOC);
@@ -100,6 +100,14 @@ class login_processing{
         $total_pages = ceil($rowCount / $row_per_page);
 
         return [$result_data, $total_pages];
+    }
+
+    public function fetch_project_ids($user_id){
+        $sql_get_id = $this->pdo->prepare("SELECT `project_id` FROM `assigned_projects` WHERE `user_id`=?");
+        $sql_get_id->bindParam(1, $user_id);
+        $sql_get_id->execute();
+        $result_ids = $sql_get_id->fetchAll(\PDO::FETCH_ASSOC);
+        return $result_ids;
     }
 
     // public function pagination($d){
